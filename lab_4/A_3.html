@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let row = parseInt(prompt("Enter the rows: "));
+
+document.write("<pre>");
+
+for (let i = 0; i < row; i++)
+{
+
+    for (let s = 0; s < row - i - 1; s++) {
+        document.write(" ");
+    }
+
+    let k = 1;
+
+    for (let j = 0; j <= i; j++) {
+        document.write(k + " ");
+        k = k * (i - j) / (j + 1);
+    }
+
+    document.write("\n");
+}
+document.write("</pre>");
+</script>
+
+</body>
+</html>

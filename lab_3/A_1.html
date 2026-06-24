@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseFloat(prompt("Enter the number - 1 : "));
+        let num2 = parseFloat(prompt("Enter the number - 2 : "));
+
+    if(num1 >= num2)
+    {
+      let symbol = prompt("Enter the symbol : '+' or '-' or '*' or '/' ");
+
+        if(symbol == '+')
+        {
+            document.write("Sum of two numbers : " + (num1 + num2));
+        }
+        else if(symbol == '-')
+        {
+            document.write("Subtraction of two numbers : " + (num1 - num2));
+        }
+        else if(symbol == '*')
+        {
+            document.write("Multiplcation of two number : " + (num1 * num2));
+        }
+        else if(symbol == '/')
+        {
+            document.write("Division of two numbers : " + (num1 / num2));
+        }
+        else
+        {
+            document.write("Invalid Symbol" + "<br/>");
+        }
+    }
+    else
+    {
+        document.write("Invalid Numbers");
+    }
+
+
+    </script>
+</body>
+</html>

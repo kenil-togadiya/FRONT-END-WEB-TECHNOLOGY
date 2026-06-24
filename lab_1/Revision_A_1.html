@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv
+        {
+            animation-name: box;
+            height: 100px;
+            width: 100px;
+            animation-duration: 5s;
+        }
+        @keyframes box
+        {
+            from
+            {
+                background-color: red;
+            }
+            to
+            {
+                background-color: yellow;
+            }
+        }
+        #movingbox
+        {
+            animation-name: movbox;
+            height: 100px;
+            width: 100px;
+            animation-duration: 2s;
+            background-color: rgb(74, 63, 34);
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            position: relative;
+            animation-direction: reverse;
+            animation-timing-function:cubic-bezier(0.95, 0.055, 0.675, 0.19);
+        }
+        @keyframes movbox
+        {
+            0%
+            {
+                top: 10px;
+                left: 0px;
+            }
+            25%
+            {
+                top: 10px;
+                left: 100px;
+            }
+            50%
+            {
+                top: 100px;
+                left: 100px;
+            }
+            75%
+            {
+                top: 100px;
+                left: 0px;
+            }
+            100%
+            {
+                top: 10px;
+                left: 0px;
+            }
+        }
+        #link
+        {
+            color: red;
+            margin-left: 700px;
+            font-size: 30px;
+            text-decoration: none;
+            border:solid green 2px;
+            padding: 10px;
+            position: absolute;
+            margin-top: 200px;
+        }
+
+        #link:visited
+        {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id = "mydiv"></div>
+    <br>
+    <div id = "movingbox"></div>
+
+
+    <a href="https://darshanums.in/Login.aspx" id="link">Click here</a>
+</body>
+</html>

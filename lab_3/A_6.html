@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = parseFloat(prompt("Enter the number : "));
+
+        sum = 0;
+        temp = num;
+        let len = num.toString().length;
+
+    while(num > 0)
+    {
+        rem = num % 10;
+        sum = sum + Math.pow(rem,len);
+        num = Math.floor(num / 10);
+    }
+
+    if(sum == temp)
+    {
+        alert(temp + " number is Aarmstrong number");
+    }
+    else
+    {
+        alert(temp + " number is not Aarmstrong number");
+    }
+    </script>
+</body>
+</html>

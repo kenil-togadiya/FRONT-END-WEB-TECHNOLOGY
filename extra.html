@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+  let encrypted = "L dp MdydVfulsw dqg L oryh surjudpplqj";
+  let decrypted = "";
+
+for (let ch of encrypted) {
+    if (ch === " ") 
+    {
+        decrypted += " ";
+    }
+    else 
+    {
+        decrypted += String.fromCharCode(ch.charCodeAt(0) - 3);
+    }
+}
+
+document.write("Encrypted String: " + encrypted + "<br>");
+document.write("Decrypted String: " + decrypted + "<br/>");
+
+
+let encrypted1 = "JavaScript is powerful language";
+
+let decrypted1 = btoa(encrypted1);
+
+document.write("Encrypted: " + encrypted1 + "<br>");
+document.write("Decrypted: " + decrypted1);
+    </script>
+</body>
+</html>

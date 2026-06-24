@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = (prompt("Enter the number :  "));
+
+    if(isNaN(num))
+    {
+        alert("Out of range");
+    }
+    else if(num < 0 && num > 999)
+    {
+        alert("Out of range");
+    }
+    else
+    {   
+        once = ["Zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twalve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","ninteen"];
+        tense = ["","","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninty"];
+        hundreds = ["","one hundred","two hundred","three hundred","four hundred","five hundred","six hundred","seven hundred","eight hundred","nine hundred"];
+        
+        ans = "";
+        
+        if(num > 99)
+        {
+            ans += hundreds[parseInt(num / 100)];
+            num = num % 100;
+        }
+        if(num > 19)
+        {
+            ans += " " + tense[parseInt(num / 10)];
+            num = num % 10;
+        }
+        if(num >= 0)
+        {
+            ans += " " + once[parseInt(num)];
+            num = num ;
+        }
+
+        alert(ans);
+    }
+
+    </script>
+</body>
+</html>
