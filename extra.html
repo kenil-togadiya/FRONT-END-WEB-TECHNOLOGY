@@ -8,30 +8,16 @@
 </head>
 <body>
     <script>
-  let encrypted = "L dp MdydVfulsw dqg L oryh surjudpplqj";
-  let decrypted = "";
 
-for (let ch of encrypted) {
-    if (ch === " ") 
-    {
-        decrypted += " ";
-    }
-    else 
-    {
-        decrypted += String.fromCharCode(ch.charCodeAt(0) - 3);
-    }
-}
+let original = "JavaScript is powerful language";
 
-document.write("Encrypted String: " + encrypted + "<br>");
-document.write("Decrypted String: " + decrypted + "<br/>");
+let encrypted1 = btoa(original);
 
+let decrypted1 = atob(encrypted1);//decode 
 
-let encrypted1 = "JavaScript is powerful language";
-
-let decrypted1 = btoa(encrypted1);
-
-document.write("Encrypted: " + encrypted1 + "<br>");
-document.write("Decrypted: " + decrypted1);
+document.write("Original String: " + original + "<br>");
+document.write("Encrypted String: " + encrypted1 + "<br>");
+document.write("Decrypted String: " + decrypted1);
     </script>
 </body>
 </html>
