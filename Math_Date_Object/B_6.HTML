@@ -7,7 +7,15 @@
 </head>
 <body>
     <script>
-                        
+        let distance = parseFloat(prompt("Enter the distance to the building (in Meters) : "));
+        let angle = parseFloat(prompt("Enter the angle to the top of the building (in Degree) : "));
+
+        let radians = angle * (Math.PI / 180);
+
+        let height = distance * Math.tan(radians);
+
+        document.write("Height of the building : " + height.toFixed(2) + " meters");
+
     </script>
 </body>
 </html>

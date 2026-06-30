@@ -1,24 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        function digitalClock() 
-        {
-            let dt = new Date();
-
-            hour = dt.getHours();
-            minute = dt.getMinutes();
-            second = dt.getSeconds();
-
-            console.log("Digital Clock : " + hour + " : " + minute + " : " + second);
+    <title>Live Digital Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
         }
 
-        setInterval(digitalClock,1000);
+        #clock {
+            font-size: 50px;
+            background: black;
+            padding: 20px 40px;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+
+    <script>
+        function updateClock() {
+            let now = new Date();
+
+            let hours = String(now.getHours());
+            let minutes = String(now.getMinutes());
+            let seconds = String(now.getSeconds());
+
+            document.getElementById("clock").innerHTML =`${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+
+        updateClock();
     </script>
+
 </body>
 </html>

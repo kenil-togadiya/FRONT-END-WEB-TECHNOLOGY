@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Year Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #222;
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        #countdown {
+            font-size: 35px;
+            margin-top: 20px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1> Countdown to New Year </h1>
+    <div id="countdown"></div>
+
+    <script>
+        function updateCountdown() {
+            let now = new Date();
+
+            let nextYear = now.getFullYear() + 1;
+            let newYear = new Date(`January 1, ${nextYear} 00:00:00`);
+
+            let diff = newYear - now;
+
+            let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            let minutes = Math.floor((diff / (1000 * 60)) % 60);
+            let seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("countdown").innerHTML =
+                `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+
+            if (diff <= 0) {
+                document.getElementById("countdown").innerHTML =
+                    " Happy New Year! ";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        updateCountdown();
+    </script>
+
+</body>
+</html>
