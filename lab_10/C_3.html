@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Checkbox Example</title>
+</head>
+
+<body>
+
+    <h2>Select Roll Numbers</h2>
+
+    <input type="checkbox" value="101" onclick="showSelected()">
+    <label for="roll">101</label>
+    <br>
+
+    <input type="checkbox" value="102" onclick="showSelected()">
+    <label for="roll">102</label>
+    <br>
+
+    <input type="checkbox" value="103" onclick="showSelected()">
+    <label for="roll">103</label>
+    <br>
+
+    <input type="checkbox" value="104" onclick="showSelected()">
+    <label for="roll">104</label>
+    <br>
+
+    <input type="checkbox" value="105" onclick="showSelected()">
+    <label for="roll">105</label>
+    <br><br>
+
+
+    <h3>Selected Roll Numbers:</h3>
+
+    <p id="result"></p>
+
+
+    <script>
+
+        function showSelected() {
+            let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let selected = "";
+
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    if (selected != "") {
+                        selected += ", ";
+                    }
+
+                    selected += checkboxes[i].value;
+                }
+            }
+
+            document.getElementById("result").innerHTML = selected;
+        }
+    </script>
+
+</body>
+
+</html>

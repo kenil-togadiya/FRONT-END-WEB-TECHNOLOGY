@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button id="keyboardEvent">Click</button>
+    <span id="text"></span>
+</body>
+<script>
+    document.getElementById("keyboardEvent").addEventListener("keydown",function(event)
+{
+    console.log("Key Down");
+    document.getElementById("text").innerHTML ="Key down : " + event.key;
+})
+
+//     document.getElementById("keyboardEvent").addEventListener("keypress",function(event)
+// {
+//     console.log("Key press");
+//     document.getElementById("text").innerHTML ="Key Press :  " + event.key;
+// })
+
+//     document.getElementById("keyboardEvent").addEventListener("keyup",function()
+// {
+//     console.log("Key up");
+//     document.getElementById("text").innerHTML ="Key up";
+// })
+</script>
+</html>

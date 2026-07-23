@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myBtn">Click</button>
+    <script>
+        myBtn = document.getElementById("myBtn");
+
+        myBtn.addEventListener("click",()=>{
+            document.body.style.background='red';
+        });
+
+        myBtn.addEventListener("dblclick",()=>{
+            document.body.style.background='orange';
+        });
+
+        myBtn.addEventListener("mouseover",()=>{
+            document.body.style.background='yellow';
+        });
+
+        document.write("</br>");
+        document.write("</br>");
+
+        name = prompt("Enter the name : ");
+
+        answer = (name)=> 
+        {
+            return `welcome ${name}`;
+        }
+
+        document.write(answer(name));
+
+    </script>
+</body>
+</html>

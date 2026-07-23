@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="pattn" placeholder="Pattern">
+    <br><br>
+    <input type="text" id="myText" placeholder="Enter the String">
+    <br><br>
+    <button onclick="checkPattern()">Click</button>
+    <br><br>
+    <input type="text" id="answer" placeholder="Answer">
+
+    <script>
+        function checkPattern()
+        {
+            myText = document.getElementById("myText");
+            answer = document.getElementById("answer");
+            patten = document.getElementById("patten");
+
+            pattern = patten.value;
+
+            regEx = new RegExp(pattern);
+
+        if(regEx.test(myText.value))
+        {
+            answer.value = "valid";
+        }
+        else
+        {
+            answer.value = "Invalid";
+        }
+        }
+    </script>
+
+    
+</body>
+</html>

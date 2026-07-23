@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="txt">Click</h1>
+    <script>
+
+        document.addEventListener("mousedown", (event) => {
+            if (event.button == 0) {
+                document.getElementById("txt").innerHTML="Left Clicked";
+            }
+            if(event.button==2)
+            {
+                document.getElementById("txt").innerHTML="Right Clicked";
+            }
+        });
+
+        document.addEventListener("contextmenu",(event)=>{
+            event.preventDefault();
+        });
+        
+    </script>
+</body>
+
+</html>
